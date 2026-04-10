@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чоловічий ретрит-похід "Карпати 2026" | Campus Odesa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        animas: {
+                            green: '#455a49',       /* Dark forest green */
+                            lightgreen: '#e6eee7',  /* Sage green background blobs */
+                            red: '#ef4d56',         /* CTA Button red */
+                            redhover: '#d9414a',
+                            dark: '#1b1d1e',        /* Footer background */
+                            gray: '#f9fafa',        /* Off-white background */
+                            border: '#e5e7eb'       /* Thin borders */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Стиль для лінійних посилань зі стрілочкою */
+        .link-arrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #374151;
+            transition: color 0.3s ease;
+        }
+        .link-arrow:hover {
+            color: #455a49;
+        }
+        .link-arrow svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            transition: transform 0.3s ease;
+        }
+        .link-arrow:hover svg {
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-700 font-sans antialiased selection:bg-animas-lightgreen selection:text-animas-green">
+
+    <!-- Навігація -->
+    <nav class="fixed w-full z-50 bg-white border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-[80px]">
+                <!-- Логотип (Стилізовано під гори Animas) -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <svg class="w-10 h-10 text-animas-green" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14 6l-4 6-2-2-5 7h18l-7-11z" />
+                    </svg>
+                    <div class="flex flex-col">
+                        <span class="font-display font-bold text-lg leading-none tracking-wide text-animas-green uppercase">Campus</span>
+                        <span class="font-display font-semibold text-[10px] leading-none tracking-widest text-gray-500 uppercase mt-1">Odesa</span>
+                    </div>
+                </div>
+                
+                <!-- Меню (Desktop) -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#context" class="text-sm font-medium text-gray-700 hover:text-animas-green transition-colors">Контекст</a>
+                    <a href="#plan" class="text-sm font-medium text-gray-700 hover:text-animas-green transition-colors">План дій</a>
+                    <a href="#team" class="text-sm font-medium text-gray-700 hover:text-animas-green transition-colors">Учасники</a>
+                    <div class="flex items-center gap-4 ml-4">
+                        <a href="#partner" class="inline-flex items-center justify-center px-6 py-3 text-xs font-bold uppercase tracking-wider rounded-full text-gray-700 border border-gray-300 hover:bg-gray-50 transition-colors">
+                            Про нас
+                        </a>
+                        <a href="#partner" class="inline-flex items-center justify-center px-6 py-3 text-xs font-bold uppercase tracking-wider rounded-full text-white bg-animas-red hover:bg-animas-redhover transition-colors shadow-sm">
+                            Підтримати
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Головний екран (Hero - Світлий і чистий дизайн) -->
+    <header class="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-animas-gray overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="w-full lg:w-1/2">
+                    <span class="inline-block mb-4 text-xs font-bold uppercase tracking-widest text-animas-green bg-animas-lightgreen px-3 py-1 rounded-full">
+                        Благодійний проєкт
+                    </span>
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-6">
+                        Чоловічий ретрит-похід<br /> 
+                        <span class="text-animas-green">“НАЗВА: Карпати 2026”</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed">
+                        Для волонтерів та духовно шукаючих студентів руху Campus Odesa. Час для фізичного виклику та духовного перезавантаження.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#partner" class="inline-flex items-center justify-center px-8 py-3.5 text-sm font-bold uppercase tracking-wider rounded-full text-white bg-animas-red hover:bg-animas-redhover transition-colors shadow-md">
+                            Стати партнером
+                        </a>
+                        <a href="#context" class="inline-flex items-center justify-center px-8 py-3.5 text-sm font-bold uppercase tracking-wider rounded-full text-gray-700 border border-gray-300 bg-white hover:bg-gray-50 transition-colors">
+                            Дізнатись більше
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-animas-lightgreen rounded-[2rem] transform rotate-3"></div>
+                    <img src="https://images.unsplash.com/photo-1542869781-a272dcbc0815?q=80&w=1200&auto=format&fit=crop" alt="Карпати" class="relative z-10 w-full h-[400px] lg:h-[500px] object-cover rounded-[2rem] shadow-xl">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Наша Мета (По центру) -->
+    <section class="py-20 bg-white border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-6">Наша Мета</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                Об’єднати 10-12 хлопців (віруючих-волонтерів та духовно зацікавлених студентів) у триденному поході Карпатами задля побудови міцних стосунків та братерства, глибокого переосмислення особистих духовних цінностей та більшого пізнання Христа.
+            </p>
+        </div>
+    </section>
+
+    <!-- План дій (Стиль "Mortgage Resources" - 3 колонки з іконками) -->
+    <section class="py-24 bg-white" id="plan">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">План реалізації</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Як ми плануємо втілити цей проєкт крок за кроком.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                
+                <!-- Етап 1 -->
+                <div class="pt-8 md:pt-0 md:px-8 flex flex-col items-center md:items-start text-center md:text-left">
+                    <div class="relative inline-block mb-6">
+                        <!-- Зелена фонова пляма -->
+                        <div class="absolute w-12 h-12 bg-animas-lightgreen rounded-full -left-2 -top-2"></div>
+                        <!-- Іконка поверх -->
+                        <svg class="relative z-10 w-12 h-12 text-animas-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-semibold text-2xl text-gray-900 mb-3">Підготовка <br class="hidden lg:block"/>та збори</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">
+                        Квітень-Травень. Пошук ресурсів, формування фінального списку учасників і закупівля спорядження та продуктів харчування.
+                    </p>
+                    <a href="#partner" class="link-arrow mt-auto">
+                        Підтримати етап 
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Етап 2 -->
+                <div class="pt-8 md:pt-0 md:px-8 flex flex-col items-center md:items-start text-center md:text-left">
+                    <div class="relative inline-block mb-6">
+                        <div class="absolute w-12 h-12 bg-animas-lightgreen rounded-full -right-2 -bottom-1"></div>
+                        <svg class="relative z-10 w-12 h-12 text-animas-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-semibold text-2xl text-gray-900 mb-3">Похід <br class="hidden lg:block"/>“Карпати 2026”</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">
+                        22–24 Травня. Маршрут горами, орієнтування, спільний побут. Вечірні розмови біля вогню та глибокі духовні роздуми.
+                    </p>
+                    <a href="#context" class="link-arrow mt-auto">
+                        Читати деталі 
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Етап 3 -->
+                <div class="pt-8 md:pt-0 md:px-8 flex flex-col items-center md:items-start text-center md:text-left">
+                    <div class="relative inline-block mb-6">
+                        <div class="absolute w-12 h-12 bg-animas-lightgreen rounded-full -left-2 top-2"></div>
+                        <svg class="relative z-10 w-12 h-12 text-animas-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-semibold text-2xl text-gray-900 mb-3">Наступні <br class="hidden lg:block"/>кроки</h3>
+                    <p class="text-gray-600 text-sm mb-6 flex-grow">
+                        Закріплення досвіду через наставництво та залучення студентів до регулярних зустрічей по вивченню Біблії.
+                    </p>
+                    <a href="#team" class="link-arrow mt-auto">
+                        Хто учасники 
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Команда учасників (Загальне фото) -->
+    <section class="py-24 bg-animas-gray" id="team">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">Наші учасники</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Хлопці, які готові кинути виклик горам і власним думкам, щоб разом зростати духовно та фізично.</p>
+            </div>
+            
+            <div class="relative max-w-5xl mx-auto group">
+                <!-- Декоративний фон (зелена підкладка) -->
+                <div class="absolute -inset-3 bg-animas-lightgreen rounded-2xl transform rotate-1 transition-transform duration-500 group-hover:rotate-2"></div>
+                
+                <!-- Контейнер для фото -->
+                <div class="relative bg-white p-2 sm:p-3 rounded-2xl shadow-sm border border-gray-200">
+                    <!-- Загальне фото (Вставте своє посилання у src="") -->
+                    <img class="w-full h-[400px] md:h-[500px] lg:h-[600px] object-cover rounded-xl" src="https://images.unsplash.com/photo-1529156069898-49953eb1b5ce?q=80&w=2070&auto=format&fit=crop" alt="Команда учасників Campus Odesa">
+                    
+                    <!-- Інформаційна плашка поверх фото -->
+                    <div class="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 right-6 sm:right-auto bg-white/95 backdrop-blur-md p-5 sm:p-6 rounded-xl shadow-lg border border-gray-100 max-w-sm sm:max-w-md">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 bg-animas-lightgreen rounded-full flex items-center justify-center shrink-0">
+                                <svg class="w-5 h-5 text-animas-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            </div>
+                            <h3 class="font-display font-bold text-gray-900 text-lg sm:text-xl leading-tight">Братерство та єдність</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">Спільне подолання труднощів об'єднує і створює надійний фундамент для щирих розмов і взаємопідтримки.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контекст -->
+    <section class="py-24 bg-white border-t border-gray-100" id="context">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-6">Контекст: Чому це важливо саме зараз?</h2>
+                    <div class="space-y-6 text-gray-600 text-base leading-relaxed">
+                        <p>
+                            Сьогоднішній ритм життя в Одесі – це постійний емоційний тиск. Для хлопців він має особливу вагу через тягар війни (здебільшого саме на чоловіче населення він припадає) та передчуття імовірної мобілізації до Збройних Сил.
+                        </p>
+                        <p>
+                            Безпекова й економічна нестабільність виснажують молодих хлопців, а студенти-волонтери та ті, хто лише знайомляться з християнством, часто опиняються в полоні хаотичних думок.
+                        </p>
+                        <blockquote class="pl-6 border-l-4 border-animas-green bg-animas-lightgreen/30 py-4 pr-4 my-8 rounded-r">
+                            <p class="font-display font-medium text-lg text-gray-900 italic">
+                                "Ми бачимо критичну потребу в тому, щоб підтримати хлопців та постаратися створити простір для прийняття та підбадьорення один одного."
+                            </p>
+                        </blockquote>
+                        <p>
+                            Одна з найяскравіших ідей – повести хлопців в похід Карпатами! Обʼєднати віруючих волонтерів і студентів задля спільної пригоди з Богом. Наші хлопці потребують відновлення, а цей досвід може стати поштовхом до прийняття рішення слідувати за Христом!
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop" alt="Карпати" class="w-full h-64 object-cover rounded shadow-sm mt-8">
+                    <img src="https://images.unsplash.com/photo-1542869781-a272dcbc0815?q=80&w=600&auto=format&fit=crop" alt="Гори" class="w-full h-80 object-cover rounded shadow-sm">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Бюджет і Партнерство -->
+    <section class="py-24 bg-animas-gray border-t border-gray-200" id="partner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                
+                <!-- Інформація про бюджет -->
+                <div class="bg-white p-10 border border-gray-200 rounded-lg shadow-sm">
+                    <h2 class="font-display text-3xl font-bold text-gray-900 mb-2">Бюджет проєкту</h2>
+                    <p class="text-gray-500 mb-8 text-sm">Усі організаційні витрати на 10 осіб на 3 дні.</p>
+                    
+                    <div class="space-y-0 divide-y divide-gray-100">
+                        <div class="flex justify-between items-center py-5">
+                            <div>
+                                <h4 class="font-display font-semibold text-gray-900">Харчування</h4>
+                                <p class="text-sm text-gray-500 mt-1">Спеціалізоване харчування «Їдло» + перекуси</p>
+                            </div>
+                            <div class="font-display text-xl font-bold text-animas-green">26 700 ₴</div>
+                        </div>
+
+                        <div class="flex justify-between items-center py-5">
+                            <div>
+                                <h4 class="font-display font-semibold text-gray-900">Додаткові витрати</h4>
+                                <p class="text-sm text-gray-500 mt-1">Чай, кава, газ, розхідні матеріали</p>
+                            </div>
+                            <div class="font-display text-xl font-bold text-animas-green">2 000 ₴</div>
+                        </div>
+
+                        <div class="flex justify-between items-center py-6 mt-4">
+                            <h4 class="font-display text-xl font-bold text-gray-900">Загальна потреба:</h4>
+                            <div class="font-display text-3xl font-bold text-animas-red">28 700 ₴</div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 mt-4 bg-gray-50 p-3 rounded">
+                        * Внесок у розмірі 1000 грн та витрати на квитки до Івано-Франківська покриваються учасниками окремо.
+                    </p>
+                </div>
+
+                <!-- Як стати партнером -->
+                <div>
+                    <h2 class="font-display text-3xl font-bold text-gray-900 mb-4">Як стати партнером?</h2>
+                    <p class="text-gray-600 mb-8">
+                        Шлях в гори — це найкраще спосіб для виховання характеру і пізнання себе. Ми запрошуємо вас підтримати наших хлопців у цьому важливому кроці!
+                    </p>
+                    
+                    <div class="bg-animas-lightgreen/50 border border-animas-lightgreen rounded-lg p-6 mb-8 flex items-center justify-between">
+                        <div>
+                            <p class="text-sm text-animas-green font-bold uppercase tracking-wider mb-1">Інвестиція в 1 учасника</p>
+                            <p class="text-xs text-gray-600">Покриває харчування та організацію</p>
+                        </div>
+                        <div class="font-display text-3xl font-bold text-animas-green">2 400 ₴</div>
+                    </div>
+
+                    <h4 class="font-display font-bold text-lg mb-4 text-gray-900">Реквізити для переказу:</h4>
+                    
+                    <div class="space-y-6">
+                        <!-- IBAN -->
+                        <div class="bg-white border border-gray-200 p-5 rounded-lg flex items-start gap-4 shadow-sm">
+                            <div class="mt-1 bg-gray-100 p-2 rounded text-gray-500">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm font-bold text-gray-900 mb-1">Переказ через Приват24</p>
+                                <p class="text-xs text-gray-500 mb-2">Оберіть меню "Платежі" та введіть рахунок:</p>
+                                <div class="flex items-center bg-gray-50 border border-gray-200 rounded p-2">
+                                    <code class="text-sm font-mono font-medium text-gray-700 flex-1" id="iban">UA063052990000026004045007863</code>
+                                    <button onclick="copyIban()" class="text-animas-green hover:text-animas-red transition-colors px-2" title="Копіювати">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                    </button>
+                                </div>
+                                <p id="copy-msg" class="text-xs font-bold text-animas-green mt-1 hidden transition-all">Скопійовано!</p>
+                            </div>
+                        </div>
+
+                        <!-- QR -->
+                        <div class="bg-white border border-gray-200 p-5 rounded-lg flex items-start gap-4 shadow-sm">
+                            <div class="mt-1 bg-gray-100 p-2 rounded text-gray-500">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"></path></svg>
+                            </div>
+                            <div class="flex-1 flex gap-4 items-center">
+                                <div class="w-20 h-20 bg-gray-100 border border-gray-200 rounded flex items-center justify-center shrink-0">
+                                    <span class="text-[10px] font-medium text-gray-400 text-center leading-tight">Ваш<br>QR-код</span>
+                                    <!-- <img src="URL" class="w-full h-full object-contain p-1"> -->
+                                </div>
+                                <div class="text-xs text-gray-600 space-y-1.5">
+                                    <p><span class="text-gray-400">Отримувач:</span> <strong class="text-gray-900">Місія "УДХ"</strong></p>
+                                    <p><span class="text-gray-400">Залучив:</span> <strong class="text-gray-900">02 : 2306</strong></p>
+                                    <p><span class="text-gray-400">Платник:</span> <strong class="text-gray-900">Ваше ПІБ</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер (В стилі Animas Dark Footer) -->
+    <footer class="bg-animas-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                
+                <!-- Лого в футері -->
+                <div class="flex items-center gap-3">
+                    <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14 6l-4 6-2-2-5 7h18l-7-11z" />
+                    </svg>
+                    <div class="flex flex-col">
+                        <span class="font-display font-bold text-base leading-none tracking-wide uppercase">Campus</span>
+                        <span class="font-display font-semibold text-[9px] leading-none tracking-widest text-gray-400 uppercase mt-1">Odesa</span>
+                    </div>
+                </div>
+
+                <!-- Лінки -->
+                <div class="flex gap-8 text-sm font-medium text-gray-300">
+                    <a href="#plan" class="hover:text-white transition-colors">План дій</a>
+                    <a href="#partner" class="hover:text-white transition-colors">Бюджет</a>
+                    <a href="#team" class="hover:text-white transition-colors">Учасники</a>
+                </div>
+
+                <!-- Копірайт -->
+                <div class="text-xs text-gray-500">
+                    З вдячністю, команда Campus Odesa.<br>
+                    &copy; 2026. Всі права захищені.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипт для копіювання IBAN -->
+    <script>
+        function copyIban() {
+            const ibanText = document.getElementById('iban').innerText;
+            const textarea = document.createElement('textarea');
+            textarea.value = ibanText;
+            document.body.appendChild(textarea);
+            textarea.select();
+            
+            try {
+                document.execCommand('copy');
+                const msg = document.getElementById('copy-msg');
+                msg.classList.remove('hidden');
+                setTimeout(() => {
+                    msg.classList.add('hidden');
+                }, 2500);
+            } catch (err) {
+                console.error('Помилка копіювання', err);
+            } finally {
+                document.body.removeChild(textarea);
+            }
+        }
+    </script>
+</body>
+</html>
